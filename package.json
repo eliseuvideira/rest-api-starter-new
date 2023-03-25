@@ -4,6 +4,12 @@
   "main": "index.js",
   "author": "Eliseu Videira <eliseuvideira1@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.15.9",
     "ts-node": "^10.9.1",
