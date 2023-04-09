@@ -1,12 +1,12 @@
 export interface PostProps {
-  postId: number;
+  postId: string;
   title: string;
   content: string;
   authorId: number;
 }
 
 export interface UserProps {
-  userId: number;
+  userId: string;
   name: string;
 }
 

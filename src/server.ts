@@ -1,14 +1,8 @@
-import { app } from "./app";
-import fs from "fs";
+import { middlewares } from "./functions/middlewares";
+import { app } from "./utils/app";
 
 const main = async () => {
-  const routes = fs.readdirSync("./src/routes");
-
-  for (const route of routes) {
-    const { router } = await import(`./routes/${route}`);
-
-    app.use(router);
-  }
+  await middlewares(app);
 
   app.listen(3000, () => {
     console.log("http://localhost:3000");

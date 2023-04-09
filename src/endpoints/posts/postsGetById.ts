@@ -6,7 +6,7 @@ import { HttpError } from "../../utils/HttpError";
 export const postsGetById = endpoint(async (req, res) => {
   const { postId } = req.params;
 
-  const post = Post.findById(database, { postId: +postId });
+  const post = Post.findById(database, { postId });
 
   if (!post) {
     throw new HttpError(404, `Post with postId ${postId} not found`);

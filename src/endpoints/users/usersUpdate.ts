@@ -6,7 +6,7 @@ export const usersUpdate = endpoint(async (req, res) => {
   const { userId } = req.params;
   const { ...input } = req.body;
 
-  const user = User.updateById(database, { userId: +userId }, { ...input });
+  const user = User.updateById(database, { userId }, { ...input });
 
   res.status(200).json(user);
 });
